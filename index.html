@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AromaLoom | Velas Artesanales</title>
+    <meta name="description" content="Velas artesanales que fusionan diseño, bienestar y experiencias sensoriales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">AromaLoom</a>
+            <nav>
+                <ul>
+                    <li><a href="#historia">Historia</a></li>
+                    <li><a href="#valores">Valores</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ilumina tu esencia</h1>
+            <p>Artesanía, bienestar y diseño consciente en cada vela.</p>
+            <a href="#productos" class="btn-primary">Descubrir Colección</a>
+        </div>
+    </section>
+
+    <!-- Historia Section -->
+    <section id="historia" class="section-padding">
+        <div class="container text-center">
+            <h2>Nuestra Historia</h2>
+            <p class="section-desc">
+                AromaLoom nació en 2019 cuando su fundadora, Marina Solano, comenzó a crear velas como una forma de
+                manejar el estrés.
+                Lo que inició como un hobby se convirtió en una marca que fusiona diseño, bienestar y experiencias
+                sensoriales.
+            </p>
+        </div>
+    </section>
+
+    <!-- Valores Section -->
+    <section id="valores" class="section-padding bg-light">
+        <div class="container">
+            <h2>Nuestros Valores</h2>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Artesanía Auténtica</h3>
+                    <p>Cada pieza es creada a mano con dedicación y detalle.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sostenibilidad</h3>
+                    <p>Materiales eco-amigables y procesos respetuosos con el entorno.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-heart"></i>
+                    <h3>Conexión Emocional</h3>
+                    <p>Aromas diseñados para evocar recuerdos y sensaciones.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h3>Diseño Consciente</h3>
+                    <p>Estética minimalista que embellece cualquier espacio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section id="productos" class="section-padding">
+        <div class="container">
+            <h2>Colección Exclusiva</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="1" data-name="Vela 'Golden Calm'" data-price="48.90"
+                    data-img="assets/golden_calm.png">
+                    <div class="product-image">
+                        <img src="assets/golden_calm.png" alt="Vela Golden Calm">
+                        <button class="add-to-cart-btn">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vela 'Golden Calm'</h3>
+                        <p class="price">S/ 48.90</p>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-id="2" data-name="Vela 'Forest Whisper'" data-price="59.50"
+                    data-img="assets/forest_whisper.png">
+                    <div class="product-image">
+                        <img src="assets/forest_whisper.png" alt="Vela Forest Whisper">
+                        <button class="add-to-cart-btn">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vela 'Forest Whisper'</h3>
+                        <p class="price">S/ 59.50</p>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" data-id="3" data-name="Difusor 'Citrus Rise'" data-price="72.00"
+                    data-img="assets/citrus_rise.png">
+                    <div class="product-image">
+                        <img src="assets/citrus_rise.png" alt="Difusor Citrus Rise">
+                        <button class="add-to-cart-btn">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Difusor 'Citrus Rise'</h3>
+                        <p class="price">S/ 72.00</p>
+                    </div>
+                </div>
+                <!-- Product 4 (Special) -->
+                <div class="product-card product-card-special" data-id="4" data-name="Set 'Soul Moments Box'"
+                    data-price="129.00" data-img="assets/soul_moments.png">
+                    <div class="product-image">
+                        <img src="assets/soul_moments.png" alt="Set Soul Moments Box">
+                        <button class="add-to-cart-btn">Añadir al carrito</button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Set 'Soul Moments Box'</h3>
+                        <p class="description">Un regalo inolvidable. Incluye nuestra vela más vendida y un difusor
+                            exclusivo en una presentación de lujo.</p>
+                        <p class="price">S/ 129.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="section-padding bg-light">
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>“Las velas de AromaLoom me han ayudado muchísimo a relajarme después del trabajo. Son
+                        increíbles.”</p>
+                    <h4>– María P.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>“El aroma dura muchísimo y el diseño es hermoso. Se nota la calidad.”</p>
+                    <h4>– Daniela R.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>“El set de regalo fue perfecto para un cumpleaños, quedó encantada.”</p>
+                    <h4>– Paolo V.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section-padding contact-section">
+        <div class="container">
+            <h2>Hablemos</h2>
+            <p class="section-desc">¿Tienes alguna duda o pedido especial? Estamos aquí para ayudarte a elegir el aroma
+                perfecto.</p>
+            <a href="https://wa.link/iddr03" target="_blank" class="contact-btn-large">
+                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>AromaLoom</h3>
+                <p>Diseño, bienestar y experiencias sensoriales.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <a href="https://wa.link/iddr03" target="_blank" class="footer-link">Chat en WhatsApp</a>
+                <p>Email: contacto@aromaloom.com</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AromaLoom. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal-overlay" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3>Tu Carrito</h3>
+                <button id="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be injected here -->
+                <p class="empty-cart-msg">Tu carrito está vacío.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">S/ 0.00</span>
+                </div>
+                <a href="https://wa.link/iddr03" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i>
+                    Contactar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
