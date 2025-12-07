@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             renderProductDetails();
         } else if (path.includes('index.html') || path.endsWith('/') || path.endsWith('aromaloom/')) {
             renderTestimonialCarousel();
+            renderBestSellers();
         } else if (path.includes('collections.html')) {
             renderCollections();
         } else if (path.includes('contact.html')) {
@@ -348,6 +349,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentIndex = (currentIndex + 1) % slides.length;
                 slides[currentIndex].classList.add('active');
             }, 5000); // 5 seconds
+        }
+    }
+
+    // --- Best Sellers (Home) ---
+    function renderBestSellers() {
+        const grid = document.getElementById('best-sellers-grid');
+        if (grid && typeof products !== 'undefined') {
+            // Select 3 specific "star" products or just the first 3
+            // For now, let's take the first 3 distinct ones or specific IDs if known to be "star"
+            // Let's take index 0, 1, and 3 (Golden Calm, Forest Whisper, Soul Moments Box) as "Star" products
+            const bestSellers = [products[0], products[1], products[3]];
+
+            grid.innerHTML = bestSellers.map(product => `
+                <div class="product-card-featured" data-id="${product.id}">
+                     <div class="featured-image">
+                        <a href="product.html?id=${product.id}"><img src="${product.image}" alt="${product.name}"></a>
+                    </div>
+                    <div class="featured-info">
+                        <h3><a href="product.html?id=${product.id}">${product.name}</a></h3>
+                        <p class="notes">${product.notes}</p>
+                        <p class="price">S/ ${product.price.toFixed(2)}</p>
+                        <button class="add-to-cart-btn btn-primary" data-id="${product.id}">Añadir al carrito</button>
+                    </div>
+                </div>
+            `).join('');
         }
     }
 

@@ -65,7 +65,7 @@ const products = [
         name: "Vela 'Spiced Pumpkin'",
         price: 55.00,
         category: "Colección temporada",
-        image: "assets/golden_calm.png", // Reusing warm image
+        image: "assets/spiced_pumpkin_final.jpg",
         description: "Edición limitada de otoño. Cálida y especiada.",
         notes: "Calabaza, Canela, Clavo",
         featured: false
@@ -76,7 +76,7 @@ const products = [
         name: "Set 'Home Harmony'",
         price: 145.00,
         category: "Sets de regalo",
-        image: "assets/soul_moments.png", // Reusing set image
+        image: "assets/home_harmony_final.jpg",
         description: "El set perfecto para armonizar tu hogar. Incluye dos velas y un spray de ambiente.",
         notes: "Lavanda, Eucalipto, Menta",
         featured: false
@@ -86,7 +86,7 @@ const products = [
         name: "Aromatizador 'Lino Fresco'",
         price: 35.00,
         category: "Difusores",
-        image: "assets/ocean_breeze.png", // Reusing fresh image
+        image: "assets/bambu_zen_final.jpg",
         description: "Spray para textiles con aroma a ropa recién lavada y secada al sol.",
         notes: "Algodón, Lirio, Almizcle blanco",
         featured: false
@@ -96,7 +96,7 @@ const products = [
         name: "Vela 'Midnight Jasmine'",
         price: 62.00,
         category: "Velas",
-        image: "assets/lavender_dreams.png", // Reusing floral image
+        image: "assets/midnight_jasmine_final.jpg",
         description: "Un aroma floral intenso y seductor para tus noches.",
         notes: "Jazmín, Nardo, Ylang Ylang",
         featured: false
@@ -106,7 +106,7 @@ const products = [
         name: "Difusor 'Bambú Zen'",
         price: 75.00,
         category: "Difusores",
-        image: "assets/forest_whisper.png", // Reusing green image
+        image: "assets/lino_fresco_final.jpg",
         description: "Equilibrio y frescura verde para tu espacio de trabajo o meditación.",
         notes: "Bambú, Té Verde, Pepino",
         featured: false
@@ -116,7 +116,7 @@ const products = [
         name: "Set 'Mini Essentials'",
         price: 89.00,
         category: "Sets de regalo",
-        image: "assets/soul_moments.png", // Reusing set image
+        image: "assets/mini_essentials_final.jpg",
         description: "Trío de nuestras velas más vendidas en versión mini.",
         notes: "Vainilla, Pino, Cítricos",
         featured: false
