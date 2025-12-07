@@ -18,13 +18,13 @@
     <!-- Header -->
     <header>
         <div class="container header-content">
-            <a href="#" class="logo">AromaLoom</a>
+            <a href="index.html" class="logo">AromaLoom</a>
             <nav>
                 <ul>
-                    <li><a href="#historia">Historia</a></li>
-                    <li><a href="#valores">Valores</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="catalog.html">Catálogo</a></li>
+                    <li><a href="collections.html">Colecciones</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </nav>
             <div class="cart-icon" id="cart-btn">
@@ -39,7 +39,7 @@
         <div class="hero-content">
             <h1>Ilumina tu esencia</h1>
             <p>Artesanía, bienestar y diseño consciente en cada vela.</p>
-            <a href="#productos" class="btn-primary">Descubrir Colección</a>
+            <a href="catalog.html" class="btn-primary">Descubrir Colección</a>
         </div>
     </section>
 
@@ -84,64 +84,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Productos Section -->
-    <section id="productos" class="section-padding">
-        <div class="container">
-            <h2>Colección Exclusiva</h2>
-            <div class="products-grid">
-                <!-- Product 1 -->
-                <div class="product-card" data-id="1" data-name="Vela 'Golden Calm'" data-price="48.90"
-                    data-img="assets/golden_calm.png">
-                    <div class="product-image">
-                        <img src="assets/golden_calm.png" alt="Vela Golden Calm">
-                        <button class="add-to-cart-btn">Añadir al carrito</button>
-                    </div>
-                    <div class="product-info">
-                        <h3>Vela 'Golden Calm'</h3>
-                        <p class="price">S/ 48.90</p>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="product-card" data-id="2" data-name="Vela 'Forest Whisper'" data-price="59.50"
-                    data-img="assets/forest_whisper.png">
-                    <div class="product-image">
-                        <img src="assets/forest_whisper.png" alt="Vela Forest Whisper">
-                        <button class="add-to-cart-btn">Añadir al carrito</button>
-                    </div>
-                    <div class="product-info">
-                        <h3>Vela 'Forest Whisper'</h3>
-                        <p class="price">S/ 59.50</p>
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="product-card" data-id="3" data-name="Difusor 'Citrus Rise'" data-price="72.00"
-                    data-img="assets/citrus_rise.png">
-                    <div class="product-image">
-                        <img src="assets/citrus_rise.png" alt="Difusor Citrus Rise">
-                        <button class="add-to-cart-btn">Añadir al carrito</button>
-                    </div>
-                    <div class="product-info">
-                        <h3>Difusor 'Citrus Rise'</h3>
-                        <p class="price">S/ 72.00</p>
-                    </div>
-                </div>
-                <!-- Product 4 (Special) -->
-                <div class="product-card product-card-special" data-id="4" data-name="Set 'Soul Moments Box'"
-                    data-price="129.00" data-img="assets/soul_moments.png">
-                    <div class="product-image">
-                        <img src="assets/soul_moments.png" alt="Set Soul Moments Box">
-                        <button class="add-to-cart-btn">Añadir al carrito</button>
-                    </div>
-                    <div class="product-info">
-                        <h3>Set 'Soul Moments Box'</h3>
-                        <p class="description">Un regalo inolvidable. Incluye nuestra vela más vendida y un difusor
-                            exclusivo en una presentación de lujo.</p>
-                        <p class="price">S/ 129.00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Testimonios Section -->
@@ -149,19 +91,7 @@
         <div class="container">
             <h2>Lo que dicen nuestros clientes</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>“Las velas de AromaLoom me han ayudado muchísimo a relajarme después del trabajo. Son
-                        increíbles.”</p>
-                    <h4>– María P.</h4>
-                </div>
-                <div class="testimonial-card">
-                    <p>“El aroma dura muchísimo y el diseño es hermoso. Se nota la calidad.”</p>
-                    <h4>– Daniela R.</h4>
-                </div>
-                <div class="testimonial-card">
-                    <p>“El set de regalo fue perfecto para un cumpleaños, quedó encantada.”</p>
-                    <h4>– Paolo V.</h4>
-                </div>
+                <!-- Injected via JS for carousel effect -->
             </div>
         </div>
     </section>
@@ -191,9 +121,12 @@
                 <p>Email: contacto@aromaloom.com</p>
             </div>
             <div class="footer-social">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-pinterest"></i></a>
+                <!-- Social icons removed -->
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="faq.html" class="footer-link">FAQ</a><br>
+                <a href="policies.html" class="footer-link">Políticas</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -223,6 +156,7 @@
         </div>
     </div>
 
+    <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
 

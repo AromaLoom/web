@@ -112,6 +112,11 @@ nav a {
     position: relative;
 }
 
+nav a.active {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
 nav a::after {
     content: '';
     position: absolute;
@@ -123,7 +128,8 @@ nav a::after {
     transition: var(--transition);
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
     width: 100%;
 }
 
@@ -148,6 +154,18 @@ nav a:hover::after {
     justify-content: center;
     align-items: center;
     font-weight: 600;
+}
+
+/* Page Header */
+.page-header {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+    background-color: #f0ebe5;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: var(--color-primary);
 }
 
 /* Hero Section */
@@ -204,6 +222,7 @@ nav a:hover::after {
     font-weight: 500;
     transition: var(--transition);
     border: 1px solid var(--color-white);
+    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -248,7 +267,7 @@ nav a:hover::after {
     color: #666;
 }
 
-/* Products Section */
+/* Products Section & Catalog */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -372,49 +391,260 @@ nav a:hover::after {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
-    .product-card-special {
-        flex-direction: column;
-    }
-
-    .product-card-special .product-image,
-    .product-card-special .product-info {
-        width: 100%;
-    }
-
-    .product-card-special .product-image {
-        height: 300px;
-    }
+/* Catalog Filters */
+.catalog-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
-/* Testimonials Section */
-.testimonials-grid {
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
+
+/* Product Detail Page */
+.product-detail-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.detail-image {
+    height: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-info h1 {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.detail-price {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.detail-desc {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.detail-notes {
+    background-color: #fff;
+    padding: 1rem;
+    border-left: 3px solid var(--color-accent);
+    margin-bottom: 2rem;
+}
+
+.detail-meta {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.btn-large {
+    position: static;
+    transform: none;
+    opacity: 1;
+    width: auto;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+}
+
+/* Collections */
+.collection-group {
+    margin-bottom: 5rem;
+}
+
+.collection-group h2 {
+    text-align: left;
+    font-size: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Contact Form */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-form-wrapper {
+    background-color: var(--color-white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
 }
 
-.testimonial-card {
+.info-box {
     background-color: var(--color-white);
-    padding: 2.5rem;
-    border-radius: 4px;
+    padding: 2rem;
+    border-radius: 8px;
     box-shadow: var(--shadow-soft);
-    text-align: center;
 }
 
-.testimonial-card p {
+.info-box h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* FAQ */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: var(--color-white);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+}
+
+.faq-item h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Policies */
+.policies-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.policy-section {
+    background-color: var(--color-white);
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+}
+
+.policy-section h2 {
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+/* Testimonials Carousel */
+.carousel-container {
+    position: relative;
+    height: 300px;
+    /* Fixed height for carousel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    transition: all 0.8s ease;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: var(--color-white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+    pointer-events: none;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.testimonial-slide p {
     font-style: italic;
     margin-bottom: 1.5rem;
     color: #555;
+    font-size: 1.1rem;
 }
 
-.testimonial-card h4 {
-    font-size: 0.9rem;
+.testimonial-slide h4 {
+    font-size: 1rem;
     color: var(--color-primary);
     font-weight: 600;
 }
 
-/* Contact Section */
+.star-rating {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section (Home) */
 .contact-section {
     background-color: var(--color-white);
     text-align: center;
@@ -454,7 +684,7 @@ footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3rem;
     margin-bottom: 3rem;
 }
@@ -465,7 +695,8 @@ footer {
     color: var(--color-accent);
 }
 
-.footer-contact h4 {
+.footer-contact h4,
+.footer-links h4 {
     color: var(--color-accent);
     margin-bottom: 1rem;
 }
@@ -474,26 +705,17 @@ footer {
     display: inline-block;
     margin-bottom: 0.5rem;
     color: var(--color-white);
-    border-bottom: 1px solid var(--color-accent);
+    border-bottom: 1px solid transparent;
 }
 
 .footer-link:hover {
     color: var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
 }
 
 .footer-social {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.footer-social a {
-    font-size: 1.5rem;
-    color: var(--color-white);
-}
-
-.footer-social a:hover {
-    color: var(--color-accent);
+    /* Hidden as per request */
+    display: none;
 }
 
 .footer-bottom {
@@ -694,6 +916,31 @@ footer {
 
     nav {
         display: none;
-        /* Simple mobile hide for now, could add hamburger later if requested */
+    }
+
+    .product-card-special {
+        flex-direction: column;
+    }
+
+    .product-card-special .product-image,
+    .product-card-special .product-info {
+        width: 100%;
+    }
+
+    .product-card-special .product-image {
+        height: 300px;
+    }
+
+    .product-detail-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .detail-image {
+        height: 400px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | AromaLoom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">AromaLoom</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalog.html">Catálogo</a></li>
+                    <li><a href="collections.html">Colecciones</a></li>
+                    <li><a href="contact.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon" id="cart-btn">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header section-padding text-center">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte a encontrar tu aroma perfecto.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section-padding">
+        <div class="container contact-container">
+            <div class="contact-form-wrapper">
+                <h2>Envíanos un mensaje</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Número de Teléfono</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary"
+                        style="background-color: var(--color-primary); color: white;">Enviar</button>
+                </form>
+            </div>
+
+            <div class="contact-info-wrapper">
+                <div class="info-box">
+                    <h3>Ubicación</h3>
+                    <!-- Google Maps Placeholder -->
+                    <div class="map-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.666987654321!2d-77.042793!3d-12.046374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b72645d333%3A0x4e27e939b827720e!2sPlaza%20Mayor%20de%20Lima!5e0!3m2!1ses!2spe!4v1635789012345!5m2!1ses!2spe"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3>WhatsApp</h3>
+                    <p>Atención personalizada inmediata.</p>
+                    <a href="https://wa.link/iddr03" target="_blank" class="btn-whatsapp"
+                        style="display:inline-flex; width:auto; margin-top:1rem;">
+                        <i class="fab fa-whatsapp"></i> Chatear ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>AromaLoom</h3>
+                <p>Diseño, bienestar y experiencias sensoriales.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <a href="https://wa.link/iddr03" target="_blank" class="footer-link">Chat en WhatsApp</a>
+                <p>Email: contacto@aromaloom.com</p>
+            </div>
+            <div class="footer-social">
+                <!-- Social icons removed -->
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces</h4>
+                <a href="faq.html" class="footer-link">FAQ</a><br>
+                <a href="policies.html" class="footer-link">Políticas</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AromaLoom. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal-overlay" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3>Tu Carrito</h3>
+                <button id="close-cart"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-price">S/ 0.00</span>
+                </div>
+                <a href="https://wa.link/iddr03" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i>
+                    Contactar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
